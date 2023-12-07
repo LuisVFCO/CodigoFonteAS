@@ -1,23 +1,77 @@
-# CodigoFonteAS
 
-Passo a passo para a implantação da solução
+# ichords_100
 
-Passo 1: Baixar o Repositório:
+Built with AndroidX Support
 
-Entre no github atraves do link: https://github.com/LuisVFCO/CodigoFonte.git
-va em "code" baixe e extraia o arquivo .zip.
+Requires Android Studio Arctic Fox | 2020.3.1 or higher.
 
-Passo 2: Abrir o Projeto no Android Studio:
+Current Kotlin Version 1.7.20
 
-Abra o Android Studio. Clique em "File" no menu principal. Selecione "Open" e navegue até onde você baixou o repositório do projeto e selecione a pasta do projeto. Clique em "OK" para abrir o projeto.
 
-Passo 3: Configurar o Dispositivo Virtual (Emulador):
+### SDK Versions
 
-Se você planeja executar o aplicativo em um emulador, siga estas etapas:
+compileSdkVersion 33
 
-No Android Studio, clique no ícone "AVD Manager" na barra de ferramentas ou acesse "Tools" > "AVD Manager". Clique em "Create Virtual Device" (Criar Dispositivo Virtual). Selecione um dispositivo e uma imagem do sistema que você deseja usar para o emulador. Siga as etapas do assistente para criar o emulador.
+buildToolsVersion "30.0.3"
 
-Passo 4: Compilar e Executar o Projeto:
+minSdkVersion 23
 
-No Android Studio, clique no botão "Run" ou use Shift + F10 para compilar e executar o projeto. Selecione o dispositivo virtual que você configurou no Passo 3 ou conecte um dispositivo físico. Aguarde o Android Studio compilar o projeto e iniciar o aplicativo.
+targetSdkVersion 33
 
+
+### Libraries
+
+1. Retrofit- REST API Call
+https://square.github.io/retrofit/
+2. Glide - Image Loading and caching.
+https://github.com/bumptech/glide
+3. Material Design Components - Google's latest Material Components.
+https://material.io/develop/android
+4. koin - Dependency Injection
+https://insert-koin.io/
+
+### Figma design guideline for better accuracy
+
+Read our guidelines to increase the accuracy of design conversion to code by optimizing Figma designs. 
+https://docs.dhiwise.com/docs/Designguidelines/intro .
+
+### App Navigation
+
+Check your app\'s UI from the AppNavigation screens of your app.
+
+### Package Structure
+
+
+```
+├── appcomponents       
+│ ├── di                 - Dependency Injection Components 
+│ │ └── MyApp.kt
+│ ├── network            - REST API Call setup
+│ │ ├── ResponseCode.kt
+│ │ └── RetrofitProvider.kt
+│ └── ui                 - Data Binding Utilities
+│     └── CustomBindingAdapter.kt
+├── constants            - Constant Files
+│ ├── IntegerConstants.kt
+│ └── StringConstants.kt
+├── extensions           - Kotlin Extension Function Files
+│ └── Strings.kt
+├── modules              - Application Specific code
+│ └── example            - A module of Application 
+│  ├── ui                - UI handling classes
+│  └── data              - Data Handling classes
+│    ├── viewmodel       - ViewModels for the UI
+│    └── model           - Model for the UI
+└── network              - REST API setup
+  ├── models             - Request/Response Models
+  ├── repository         - Network repository
+  ├── resources          - Common classes for API
+  └── RetrofitService.kt
+```
+### Fonts
+We were unable to find following Fonts, Please add manually to ```app/src/main/res/font``` and uncomment code in respective font family XML files.
+
+```
+robotoromansemibold
+rubikoneregular
+```
