@@ -2,14 +2,17 @@
 
 Passo a passo para a implantação da solução
 
-Passo 1: Baixar o Repositório:
+Passo 1: Clonar o Repositório:
 
-Entre no github atraves do link: https://github.com/LuisVFCO/CodigoFonte.git
-va em "code" baixe e extraia o arquivo .zip.
+Abra o terminal e navegue até o diretório em que você deseja clonar o projeto. Execute o seguinte
+comando para clonar o repositório do projeto:
+Bash git clone https://github.com/LuisVFCO/CodigoFonteAS.git 
 
 Passo 2: Abrir o Projeto no Android Studio:
 
-Abra o Android Studio. Clique em "File" no menu principal. Selecione "Open" e navegue até onde você baixou o repositório do projeto e selecione a pasta do projeto. Clique em "OK" para abrir o projeto.
+Abra o Android Studio. Clique em "File" (Arquivo) no menu principal. Selecione "Open" (Abrir).
+Navegue até o diretório onde você clonou o repositório do projeto e selecione a pasta raiz do
+projeto. Clique em "OK" para abrir o projeto.
 
 Passo 3: Configurar o Dispositivo Virtual (Emulador):
 
